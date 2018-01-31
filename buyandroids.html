@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Update Quantities</title>
+    <link rel="stylesheet" href="buyandroids.css">
+  </head>
+  <body>
+
+    <div class="quantities">
+      <img src="exercises/assets/plush-android.jpg" width="195" height="195">
+      <br>
+      Android Plushie, $15.00
+      <br>
+      <button id="add">Add</button>
+      <button id="remove">Remove</button>
+      <br>
+      Quantity <input id="displayQuantity" type="text" value="0">
+      <button id="checkout">Checkout</button>
+    </div>
+
+    <script>
+      var androidPrice = 15;
+      var quantity = 0;
+      var displayQuantity = document.getElementById("displayQuantity");
+      var addBtn = document.getElementById("add");
+      var removeBtn = document.getElementById("remove");
+      var checkoutBtn = document.getElementById("checkout");
+
+      function addItem() {
+        quantity = quantity + 1;
+        displayQuantity.value = quantity;
+      }
+
+      function removeItem(){
+        if (quantity > 0) {
+          quantity = quantity - 1;
+        }
+        displayQuantity.value = quantity;
+      }
+
+      function checkout() {
+        var price = quantity*androidPrice;
+        if (quantity == 0) {
+          alert("You cannot checkout 0 items. Press OK to continue shopping.");
+        } else if (quantity == 1) {
+          var confirm = prompt("Are you sure you want to purchase " + quantity + " Android plushie? Enter Y to confirm, or press enter to cancel.");
+            if (confirm == "Y" || confirm == "y") {
+              alert("You ordered " + quantity + " Android plushie. Your total is $" + price.toFixed(2) + ". Thanks for shopping with us!");
+            }
+        } else {
+          var confirm = prompt("Are you sure you want to purchase " + quantity + " Android plushies? Enter Y to confirm, or press enter to cancel.");
+            if (confirm == "Y" || confirm == "y") {
+              alert("You ordered " + quantity + " Android plushies. Your total is $" + price.toFixed(2) + ". Thanks for shopping with us!");
+            }
+        }
+      }
+
+        addBtn.onclick = addItem;
+        removeBtn.onclick = removeItem;
+        checkoutBtn.onclick = checkout;
+
+    </script>
+  </body>
+</html>

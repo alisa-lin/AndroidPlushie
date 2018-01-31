@@ -1,0 +1,26 @@
+.quantities {
+	width: 200px;
+	text-align: center;
+	border: 2px solid #ccc;
+	padding: 20px;
+	margin: 40px auto;
+	font-size: 20px;
+}
+.quantities button {
+	margin: 20px 2px 5px;
+	font-size: 18px;
+	padding: 6px 10px;
+	border-radius: 2px;
+	outline: none;
+	cursor: pointer;
+	border: 2px solid lightgrey;
+	background: #eee;
+}
+.quantities button:hover {
+	border: 2px solid yellowgreen;
+}
+.quantities input {
+	width: 40px;
+	margin: 10px 0 10px 5px;
+	font-size: 16px;
+}
