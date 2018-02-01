@@ -1,4 +1,4 @@
-.quantities {
+.android {
 	width: 200px;
 	text-align: center;
 	border: 2px solid #ccc;
@@ -6,7 +6,7 @@
 	margin: 40px auto;
 	font-size: 20px;
 }
-.quantities button {
+.android button {
 	margin: 20px 2px 5px;
 	font-size: 18px;
 	padding: 6px 10px;
@@ -16,10 +16,10 @@
 	border: 2px solid lightgrey;
 	background: #eee;
 }
-.quantities button:hover {
+.android button:hover {
 	border: 2px solid yellowgreen;
 }
-.quantities input {
+.android input {
 	width: 40px;
 	margin: 10px 0 10px 5px;
 	font-size: 16px;
